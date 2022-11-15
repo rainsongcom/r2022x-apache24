@@ -17,24 +17,12 @@
             <div class="uwa-panel panel-form login-panel">
                 <div class="uwa-input-form login-form">
                     <H3>3DEXPERIENCE R2022x</H3>
-                    <div>
-                        <A href="https://3dpassport.r2022x.rs.com/3dpassport">3DPassport</A>
-                    </div>
-                    <div>
-                        <A href="https://3ddashboard.r2022x.rs.com/3ddashboard">3DDashboard</A>
-                    </div>
-                    <div>
-                        <A href="https://3dspace.r2022x.rs.com/3dspace">3DSpace</A>
-                    </div>
-                    <div>
-                        <A href="https://3dswym.r2022x.rs.com/3dswym">3DSwym</A>
-                    </div>
-                    <div>
-                        <A href="http://fulltextsearch.r2022x.rs.com:19000/index.html">3DSpaceIndex - Mashup-UI</A>
-                    </div>
-                    <div>
-                        <A href="http://fulltextsearch.r2022x.rs.com:19001/index.html">3DSpaceIndex - Administration</A>
-                    </div>
+                    <div id="3dpassport"></div>
+                    <div id="3ddashboard"></div>
+                    <div id="3dspace"></div>
+                    <div id="3dswym"></div>
+                    <div id="3dsearch"></div>
+                    <div id="3dsearchadmin"></div>
                     <div>
                         <A href="./rsrootca.crt">Root Certificate</A>
                     </div>
@@ -42,6 +30,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var PLATFORM_BASE_DOMAIN = "r2022x.rs.com";
+
+        document.getElementById("3dpassport").innerHTML = "<A href=https://3dpassport." + PLATFORM_BASE_DOMAIN + "/3dpassport>3DPassport</A>";
+        document.getElementById("3ddashboard").innerHTML = "<A href=https://3ddashboard." + PLATFORM_BASE_DOMAIN + "/3ddashboard>3DDashboard</A>";
+        document.getElementById("3dspace").innerHTML = "<A href=https://3dspace." + PLATFORM_BASE_DOMAIN + "/3dspace>3DSpace</A>";
+        document.getElementById("3dswym").innerHTML = "<A href=https://3dswym." + PLATFORM_BASE_DOMAIN + "/3dswym>3DSwym</A>";
+        document.getElementById("3dsearch").innerHTML = "<A href=https://3dsearch." + PLATFORM_BASE_DOMAIN + ":19000/index.html>3DSpaceIndex - Mashup-UI</A>";
+        document.getElementById("3dsearchadmin").innerHTML = "<A href=https://3dsearch." + PLATFORM_BASE_DOMAIN + ":19001/index.html>3DSpaceIndex - Administration</A>";
+    </script>
 </body>
 
 </HTML>
